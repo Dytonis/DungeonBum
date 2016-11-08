@@ -69,6 +69,8 @@ namespace Assets.Scripts.Actor
             GetComponent<Animator>().SetFloat("HorzSpeed", Mathf.Abs(Velocity.x));
             GetComponent<Animator>().SetFloat("VertSpeed", Mathf.Abs(Velocity.y));
             GetComponent<Animator>().SetBool("Grounded", Grounded);
+            GetComponent<Animator>().SetBool("Hanging", Hanging);
+            GetComponent<Animator>().ResetTrigger("Climb");
         }
 
         /// <summary>
@@ -97,6 +99,8 @@ namespace Assets.Scripts.Actor
             }
             else if (dir == "u")
             {
+                u = true;
+
                 if ((Grounded))
                 {
                     Velocity.y = Mathf.Sqrt(2 * JumpHeight * Gravity);
@@ -145,6 +149,7 @@ namespace Assets.Scripts.Actor
             u = false;
         }
 
+        GameObject wallTouching = null;
         /// <summary>
         /// do not modify velocity by delta time here!
         /// </summary>
@@ -158,8 +163,8 @@ namespace Assets.Scripts.Actor
             collider.UpdateBroadCollision(newPosition, 15);
             bool foundFloor = false;
             GameObject floorTouching = null;
-            GameObject wallTouching = null;
             GameObject ceilingTouching = null;
+            wallTouching = null;
             bool foundWall = false;
             bool foundCeiling = false;
             //print(Velocity.y);
@@ -307,6 +312,8 @@ namespace Assets.Scripts.Actor
                 if(Hanging && u)
                 {
                     //climb up if possible
+                    //start animation at some point
+                    GetComponent<Animator>().SetTrigger("Climb");            
                 }
             }
             else
@@ -316,6 +323,21 @@ namespace Assets.Scripts.Actor
 
             ////walls, then modify new position
             ////ceiling, then modify new position
+        }
+        public void ClimbFinished()
+        {
+            if (wallTouching)
+            {
+                newPosition.y = wallTouching.GetComponent<ActorCollider>().TopLeftPoint.y + (collider.Size.y / 2);
+                if (r && !l)
+                {
+                    newPosition.x = wallTouching.GetComponent<ActorCollider>().TopLeftPoint.x;
+                }
+                else if (l && !r)
+                {
+                    newPosition.x = wallTouching.GetComponent<ActorCollider>().TopRightPoint.x;
+                }
+            }
         }
     }
 }

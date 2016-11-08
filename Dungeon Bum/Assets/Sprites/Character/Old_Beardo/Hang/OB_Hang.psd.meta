@@ -1,0 +1,540 @@
+fileFormatVersion: 2
+guid: 4604e70c785f60344ad003b3ffe08010
+timeCreated: 1478583770
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: OB_Hang_0
+    21300002: OB_Hang_1
+    21300004: OB_Hang_2
+    21300006: OB_Hang_3
+    21300008: OB_Hang_4
+    21300010: OB_Hang_5
+    21300012: OB_Hang_6
+    21300014: OB_Hang_7
+    21300016: OB_Hang_8
+    21300018: OB_Hang_9
+    21300020: OB_Hang_10
+    21300022: OB_Hang_11
+    21300024: OB_Hang_12
+    21300026: OB_Hang_13
+    21300028: OB_Hang_14
+    21300030: OB_Hang_15
+    21300032: OB_Hang_16
+    21300034: OB_Hang_17
+    21300036: OB_Hang_18
+    21300038: OB_Hang_19
+    21300040: OB_Hang_20
+    21300042: OB_Hang_21
+    21300044: OB_Hang_22
+    21300046: OB_Hang_23
+    21300048: OB_Hang_24
+    21300050: OB_Hang_25
+    21300052: OB_Hang_26
+    21300054: OB_Hang_27
+    21300056: OB_Hang_28
+    21300058: OB_Hang_29
+    21300060: OB_Hang_30
+    21300062: OB_Hang_31
+    21300064: OB_Hang_32
+    21300066: OB_Hang_33
+    21300068: OB_Hang_34
+    21300070: OB_Hang_35
+    21300072: OB_Hang_36
+    21300074: OB_Hang_37
+    21300076: OB_Hang_38
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 50
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: OB_Hang_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 440
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 440
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 440
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 440
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 440
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_5
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 440
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_6
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 440
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_7
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 440
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 440
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_9
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 440
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_10
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 440
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_11
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 440
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_12
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 440
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_13
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 440
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_14
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 440
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_15
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 440
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_16
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 440
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_17
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 440
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_18
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 440
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_19
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 440
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_20
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 440
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 368
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_22
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 368
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_23
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 368
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_24
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 368
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_25
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 368
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_26
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 368
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_27
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 368
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_28
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 368
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_29
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 368
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_30
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 368
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_31
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 368
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_32
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 368
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: OB_Hang_33
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 368
+        width: 24
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
