@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using Assets.Scripts.Entity;
 
 namespace Assets.Scripts.Actor.CollisionDetection
 {
@@ -9,6 +10,23 @@ namespace Assets.Scripts.Actor.CollisionDetection
         public Vector2 Size;
         public List<ActorCollider> OtherCollidersNear = new List<ActorCollider>();
         public BasicMaterial Material;
+        public List<Entity.Entity> OtherEntitiesNear = new List<Entity.Entity>();
+
+        public void UpdateBroadEntities(Matrix2 Position, float distance)
+        {
+            OtherEntitiesNear.Clear();
+            foreach (Transform T in GameObject.FindGameObjectWithTag("Ent").transform)
+            {
+                Vector2 conversion = new Vector2(Position.x, Position.y);
+                if (Vector2.Distance(conversion, T.position) < distance)
+                {
+                    if (T.GetComponent<Entity.Entity>())
+                    {
+                        OtherEntitiesNear.Add(T.GetComponent<Entity.Entity>());
+                    }
+                }
+            }
+        }
 
         public void Start()
         {

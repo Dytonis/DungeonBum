@@ -63,15 +63,15 @@ namespace Assets.Scripts.Character
         {
             if(r)
             {
-                controller.Input("r");
+                controller.Action("r");
             }
             if (l)
             {
-                controller.Input("l");
+                controller.Action("l");
             }
             if (u)
             {
-                controller.Input("u");
+                controller.Action("u");
             }
         }
     }

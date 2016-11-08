@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Actor\ActorController.cs" />
     <Compile Include="Assets\Scripts\Actor\CollisionDetection\ActorCollider.cs" />
     <Compile Include="Assets\Scripts\Character\InputMovement.cs" />
+    <Compile Include="Assets\Scripts\Entity\Chest.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity.cs" />
     <Compile Include="Assets\Scripts\Game\Const.cs" />
     <Compile Include="Assets\Scripts\Phys\PhysObject.cs" />

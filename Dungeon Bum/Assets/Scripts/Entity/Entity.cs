@@ -1,15 +1,33 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
-public class Entity : MonoBehaviour {
+namespace Assets.Scripts.Entity
+{
+    public class Entity : MonoBehaviour
+    {
+        public bool AssignCustomSize = false;
+        public Vector2 Size;
+        public List<Entity> OtherEntitiesNear = new List<Entity>();
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+        public void UpdateBroadEntities(Matrix2 Position, float distance)
+        {
+            OtherEntitiesNear.Clear();
+            foreach (Transform T in GameObject.FindGameObjectWithTag("Entities").transform)
+            {
+                Vector2 conversion = new Vector2(Position.x, Position.y);
+                if (Vector2.Distance(conversion, T.position) < distance)
+                {
+                    if (T.GetComponent<Entity>())
+                    {
+                        OtherEntitiesNear.Add(T.GetComponent<Entity>());
+                    }
+                }
+            }
+        }
+
+        public virtual void Acitvate()
+        {
+
+        }
+    }
 }

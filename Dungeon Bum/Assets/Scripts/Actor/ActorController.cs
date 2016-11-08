@@ -71,15 +71,27 @@ namespace Assets.Scripts.Actor
             GetComponent<Animator>().SetBool("Grounded", Grounded);
             GetComponent<Animator>().SetBool("Hanging", Hanging);
             GetComponent<Animator>().ResetTrigger("Climb");
+
+            //handle activatable entities
+            collider.UpdateBroadEntities(Position, 0.5f);
+
+            //chests
+            foreach (Entity.Entity e in collider.OtherEntitiesNear)
+            {
+                if(Input.GetButtonDown("Use"))
+                {
+                    e.Acitvate();
+                }
+            }
         }
 
         /// <summary>
         /// Must be fixed - framerate independant!
         /// </summary>
-        /// <param name="dir"></param>
-        public void Input(string dir)
+        /// <param name="action"></param>
+        public void Action(string action)
         {
-            if (dir == "r")
+            if (action == "r")
             {
                 r = true;
 
@@ -88,7 +100,7 @@ namespace Assets.Scripts.Actor
                 else
                     Velocity.x = WalkSpeed;
             }
-            else if (dir == "l")
+            else if (action == "l")
             {
                 l = true;
 
@@ -97,7 +109,7 @@ namespace Assets.Scripts.Actor
                 else
                     Velocity.x = -WalkSpeed;
             }
-            else if (dir == "u")
+            else if (action == "u")
             {
                 u = true;
 
