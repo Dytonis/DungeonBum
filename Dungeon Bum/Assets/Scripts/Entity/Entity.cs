@@ -7,12 +7,13 @@ namespace Assets.Scripts.Entity
     {
         public bool AssignCustomSize = false;
         public Vector2 Size;
+        [HideInInspector]
         public List<Entity> OtherEntitiesNear = new List<Entity>();
 
         public void UpdateBroadEntities(Matrix2 Position, float distance)
         {
             OtherEntitiesNear.Clear();
-            foreach (Transform T in GameObject.FindGameObjectWithTag("Entities").transform)
+            foreach (Transform T in GameObject.FindGameObjectWithTag("Ent").transform)
             {
                 Vector2 conversion = new Vector2(Position.x, Position.y);
                 if (Vector2.Distance(conversion, T.position) < distance)

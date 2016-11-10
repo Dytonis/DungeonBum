@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Assets.Scripts.Actor.CollisionDetection;
+using Assets.Scripts.Entity.Items;
 using CONST = Assets.Scripts.Game.Const;
+using System.Linq;
 
 namespace Assets.Scripts.Actor
 {
@@ -14,18 +16,21 @@ namespace Assets.Scripts.Actor
         public Vector2 VelocityTruncation;
         public bool ApplyGravity = true;
         public bool CanEdgeGrab = false;
+        public bool IsPlayerClient;
+        public bool CanInteract;
         public bool Grounded = false;
         public bool Hanging = false;
         public float Gravity = CONST.UNIVERSAL_GRAVITY;
         public float AirResistance = 0.01f;
-        public float WalkSpeed = 4;
         [Range(0, 1f)]
         public float WalkPower = 0.25f;
-        public float JumpHeight = 300;
+        public ActorStats Stats;
         private Matrix2 newPosition = Matrix2.zero;
         private bool r = false;
         private bool l = false;
         private bool u = false;
+        private GameObject ItemPopupBasic;
+        private Item ItemPoping;
 
         void Start()
         {
@@ -56,32 +61,79 @@ namespace Assets.Scripts.Actor
                 GetComponent<SpriteRenderer>().flipX = true;
             }
 
-            //assign animations
-            if(r || l)
+            if (GetComponent<Animator>())
             {
-                GetComponent<Animator>().SetBool("HoldingHorz", true);
-            }
-            else
-            {
-                GetComponent<Animator>().SetBool("HoldingHorz", false);
-            }
+                //assign animations
+                if (r || l)
+                {
+                    GetComponent<Animator>().SetBool("HoldingHorz", true);
+                }
+                else
+                {
+                    GetComponent<Animator>().SetBool("HoldingHorz", false);
+                }
 
-            GetComponent<Animator>().SetFloat("HorzSpeed", Mathf.Abs(Velocity.x));
-            GetComponent<Animator>().SetFloat("VertSpeed", Mathf.Abs(Velocity.y));
-            GetComponent<Animator>().SetBool("Grounded", Grounded);
-            GetComponent<Animator>().SetBool("Hanging", Hanging);
-            GetComponent<Animator>().ResetTrigger("Climb");
-
+                GetComponent<Animator>().SetFloat("HorzSpeed", Mathf.Abs(Velocity.x));
+                GetComponent<Animator>().SetFloat("VertSpeed", Mathf.Abs(Velocity.y));
+                GetComponent<Animator>().SetBool("Grounded", Grounded);
+                GetComponent<Animator>().SetBool("Hanging", Hanging);
+                GetComponent<Animator>().ResetTrigger("Climb");
+            }
             //handle activatable entities
             collider.UpdateBroadEntities(Position, 0.5f);
 
             //chests
+            if (ItemPopupBasic)
+            {
+                if (!collider.OtherEntitiesNear.Contains(ItemPopupBasic.GetComponent<Entity.Entity>()))
+                {
+                    if (ItemPopupBasic)
+                    {
+                        ItemPoping = null;
+                        Destroy(ItemPopupBasic.gameObject);
+                    }
+                }
+            }
             foreach (Entity.Entity e in collider.OtherEntitiesNear)
             {
-                if(Input.GetButtonDown("Use"))
+                if (e.GetComponent<Entity.Chest>() && Input.GetButtonDown("Use"))
                 {
                     e.Acitvate();
                 }
+                if (e.GetComponent<Item>())
+                {
+                    Item item = e.GetComponent<Item>();
+                    if (ItemPoping == item)
+                    {                    
+                        continue;
+                    }
+                    else
+                    {
+                        if (ItemPopupBasic)
+                        {
+                            Destroy(ItemPopupBasic.gameObject);
+                        }
+                    }
+                    ItemPoping = item;
+                    UnityEngine.Object prefab = Resources.Load("Items/UI/ItemPopupBasic");
+                    ItemPopupBasic = Instantiate(prefab) as GameObject;
+                    ItemPopupBasic.transform.position = new Vector3(e.transform.position.x, e.transform.position.y + 0.5f, -2);
+
+                    ItemPopup popup = ItemPopupBasic.GetComponent<ItemPopup>();
+
+                    popup.ItemName.text = item.UIName;
+                    if (item.Rarity == ItemRarities.Junk) popup.ItemName.color = new Color(0.6f, 0.6f, 0.6f, 1);
+                    else if (item.Rarity == ItemRarities.Common) popup.ItemName.color = new Color(1f, 1f, 1f, 1);
+                    else if (item.Rarity == ItemRarities.Uncommon) popup.ItemName.color = new Color(0f, 0.95f, 0f, 1);
+                    else if (item.Rarity == ItemRarities.Rare) popup.ItemName.color = new Color(0f, 0f, 0.95f, 1);
+                    else if (item.Rarity == ItemRarities.Epic) popup.ItemName.color = new Color(0.65f, 0f, 0.85f, 1);
+                    else if (item.Rarity == ItemRarities.Legendary) popup.ItemName.color = new Color(0.85f, 0.1f, 0.1f, 1);
+
+                    popup.Desc.text = "Level " + item.Stats.ItemLevel + " " + item.ImpericalName;
+                    popup.Hold.text = "One Handed";
+                    popup.Rarity.text = item.Rarity.ToString();
+                }
+ 
             }
         }
 
@@ -95,19 +147,19 @@ namespace Assets.Scripts.Actor
             {
                 r = true;
 
-                if (Velocity.x < WalkSpeed)
-                    Velocity.x += WalkSpeed * WalkPower;
+                if (Velocity.x < Stats.WalkSpeed)
+                    Velocity.x += Stats.WalkSpeed * WalkPower;
                 else
-                    Velocity.x = WalkSpeed;
+                    Velocity.x = Stats.WalkSpeed;
             }
             else if (action == "l")
             {
                 l = true;
 
-                if (Velocity.x > -WalkSpeed)
-                    Velocity.x -= WalkSpeed * WalkPower;
+                if (Velocity.x > -Stats.WalkSpeed)
+                    Velocity.x -= Stats.WalkSpeed * WalkPower;
                 else
-                    Velocity.x = -WalkSpeed;
+                    Velocity.x = -Stats.WalkSpeed;
             }
             else if (action == "u")
             {
@@ -115,7 +167,7 @@ namespace Assets.Scripts.Actor
 
                 if ((Grounded))
                 {
-                    Velocity.y = Mathf.Sqrt(2 * JumpHeight * Gravity);
+                    Velocity.y = Mathf.Sqrt(2 * Stats.JumpHeight * Gravity);
                 }
             }
         }

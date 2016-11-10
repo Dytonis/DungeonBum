@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using Assets.Scripts.Entity;
+using System.Linq;
 
 namespace Assets.Scripts.Actor.CollisionDetection
 {
@@ -8,8 +9,10 @@ namespace Assets.Scripts.Actor.CollisionDetection
     {
         public bool AssignCustomSize = false;
         public Vector2 Size;
+        //[HideInInspector]
         public List<ActorCollider> OtherCollidersNear = new List<ActorCollider>();
         public BasicMaterial Material;
+        //[HideInInspector]
         public List<Entity.Entity> OtherEntitiesNear = new List<Entity.Entity>();
 
         public void UpdateBroadEntities(Matrix2 Position, float distance)
@@ -26,6 +29,8 @@ namespace Assets.Scripts.Actor.CollisionDetection
                     }
                 }
             }
+
+            OtherEntitiesNear = OtherEntitiesNear.OrderByDescending(o => Vector2.Distance(o.transform.position, new Vector2(Position.x, Position.y))).ToList();
         }
 
         public void Start()

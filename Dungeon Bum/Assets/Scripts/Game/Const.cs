@@ -7,7 +7,7 @@ namespace Assets.Scripts.Game
 {
     public class Const
     {
-        public const float UNIVERSAL_GRAVITY = 8f;
+        public const float UNIVERSAL_GRAVITY = 2.5f;
         public static BasicMaterial UNIVERSIAL_MATERIAL_FALLBACK
         {
             get

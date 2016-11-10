@@ -66,16 +66,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Pyramid2D\PixelPerfect.cs" />
     <Compile Include="Assets\Pyramid2D\Structs.cs" />
     <Compile Include="Assets\Scripts\Actor\ActorController.cs" />
+    <Compile Include="Assets\Scripts\Actor\ActorStats.cs" />
     <Compile Include="Assets\Scripts\Actor\CollisionDetection\ActorCollider.cs" />
     <Compile Include="Assets\Scripts\Character\InputMovement.cs" />
     <Compile Include="Assets\Scripts\Entity\Chest.cs" />
+    <Compile Include="Assets\Scripts\Entity\CollisionDetection\EntityCollider.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity.cs" />
+    <Compile Include="Assets\Scripts\Entity\EntityController.cs" />
+    <Compile Include="Assets\Scripts\Entity\Items\Item.cs" />
+    <Compile Include="Assets\Scripts\Entity\Items\ItemEffect.cs" />
+    <Compile Include="Assets\Scripts\Entity\Items\ItemPSTables.cs" />
+    <Compile Include="Assets\Scripts\Entity\Items\ItemStats.cs" />
+    <Compile Include="Assets\Scripts\Entity\Items\Melee.cs" />
+    <Compile Include="Assets\Scripts\Entity\Items\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Entity\Items\ProjectileEffect.cs" />
     <Compile Include="Assets\Scripts\Game\Const.cs" />
     <Compile Include="Assets\Scripts\Phys\PhysObject.cs" />
+    <Compile Include="Assets\Scripts\UI\ItemPopup.cs" />
     <Compile Include="Assets\Scripts\World\CollisionDetection\WorldCollider.cs" />
     <Compile Include="Assets\Scripts\World\Materials\BasicMaterial.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Dadako\BitmapFonts\Pixel\_PixelCharLimits.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
