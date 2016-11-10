@@ -31,6 +31,7 @@ namespace Assets.Scripts.Actor
         private bool u = false;
         private GameObject ItemPopupBasic;
         private Item ItemPoping;
+        public AudioClip FootstepSound;
 
         void Start()
         {
@@ -401,6 +402,14 @@ namespace Assets.Scripts.Actor
                 {
                     newPosition.x = wallTouching.GetComponent<ActorCollider>().TopRightPoint.x;
                 }
+            }
+        }
+
+        public void Footstep()
+        {
+            if(FootstepSound)
+            {
+                AudioSource.PlayClipAtPoint(FootstepSound, Camera.main.transform.position, 0.2f);
             }
         }
     }
