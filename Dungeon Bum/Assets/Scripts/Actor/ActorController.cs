@@ -95,13 +95,14 @@ namespace Assets.Scripts.Actor
                     }
                 }
             }
+            bool pickedItem = false;
             foreach (Entity.Entity e in collider.OtherEntitiesNear)
             {
                 if (e.GetComponent<Entity.Chest>() && Input.GetButtonDown("Use"))
                 {
-                    e.Acitvate();
+                    e.ActivateWith(this);
                 }
-                if (e.GetComponent<Item>())
+                if (e.GetComponent<Item>() && !pickedItem)
                 {
                     Item item = e.GetComponent<Item>();
                     if (ItemPoping == item)
@@ -133,8 +134,16 @@ namespace Assets.Scripts.Actor
                     popup.Desc.text = "Level " + item.Stats.ItemLevel + " " + item.ImpericalName;
                     popup.Hold.text = "One Handed";
                     popup.Rarity.text = item.Rarity.ToString();
-                }
- 
+
+                    if(Input.GetButtonDown("Use"))
+                    {
+                        e.ActivateWith(this);
+                    }
+
+                    pickedItem = true;
+
+                    continue;
+                } 
             }
         }
 

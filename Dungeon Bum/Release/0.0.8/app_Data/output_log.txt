@@ -1,0 +1,101 @@
+Initialize engine version: 5.4.1f1 (649f48bbbf0f)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 1070 (ID=0x1b81)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: F:\Games\DungeonBum\Dungeon Bum\Release\0.0.8\app_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\Games\DungeonBum\Dungeon Bum\Release\0.0.8\app_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\Games\DungeonBum\Dungeon Bum\Release\0.0.8\app_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\Games\DungeonBum\Dungeon Bum\Release\0.0.8\app_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\Games\DungeonBum\Dungeon Bum\Release\0.0.8\app_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\Games\DungeonBum\Dungeon Bum\Release\0.0.8\app_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: F:\Games\DungeonBum\Dungeon Bum\Release\0.0.8\app_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading F:\Games\DungeonBum\Dungeon Bum\Release\0.0.8\app_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: F:\Games\DungeonBum\Dungeon Bum\Release\0.0.8\app_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading F:\Games\DungeonBum\Dungeon Bum\Release\0.0.8\app_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.030 seconds
+Platform assembly: F:\Games\DungeonBum\Dungeon Bum\Release\0.0.8\app_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: F:\Games\DungeonBum\Dungeon Bum\Release\0.0.8\app_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 144Hz; virtual: 3840x1388 at -1920,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.482619 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.Character.Inventory.UpdateInventory () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Character.Inventory.AddItemIfAble (Assets.Scripts.Entity.Items.Item i) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Entity.Items.Item.ActivateWith (Assets.Scripts.Actor.ActorController actor) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Actor.ActorController.LateUpdate () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.Character.Inventory.UpdateInventory () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Character.Inventory.AddItemIfAble (Assets.Scripts.Entity.Items.Item i) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Entity.Items.Item.ActivateWith (Assets.Scripts.Actor.ActorController actor) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Actor.ActorController.LateUpdate () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.Character.Inventory.UpdateInventory () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Character.Inventory.AddItemIfAble (Assets.Scripts.Entity.Items.Item i) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Entity.Items.Item.ActivateWith (Assets.Scripts.Actor.ActorController actor) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Actor.ActorController.LateUpdate () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.Character.Inventory.UpdateInventory () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Character.Inventory.AddItemIfAble (Assets.Scripts.Entity.Items.Item i) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Entity.Items.Item.ActivateWith (Assets.Scripts.Actor.ActorController actor) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Actor.ActorController.LateUpdate () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.Character.Inventory.UpdateInventory () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Character.Inventory.AddItemIfAble (Assets.Scripts.Entity.Items.Item i) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Entity.Items.Item.ActivateWith (Assets.Scripts.Actor.ActorController actor) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Actor.ActorController.LateUpdate () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.Character.Inventory.UpdateInventory () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Character.Inventory.AddItemIfAble (Assets.Scripts.Entity.Items.Item i) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Entity.Items.Item.ActivateWith (Assets.Scripts.Actor.ActorController actor) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Actor.ActorController.LateUpdate () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.Character.Inventory.UpdateInventory () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Character.Inventory.AddItemIfAble (Assets.Scripts.Entity.Items.Item i) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Entity.Items.Item.ActivateWith (Assets.Scripts.Actor.ActorController actor) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Actor.ActorController.LateUpdate () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.Character.Inventory.UpdateInventory () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Character.Inventory.AddItemIfAble (Assets.Scripts.Entity.Items.Item i) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Entity.Items.Item.ActivateWith (Assets.Scripts.Actor.ActorController actor) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Actor.ActorController.LateUpdate () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Assets.Scripts.Character.Inventory.UpdateInventory () [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Character.Inventory.AddItemIfAble (Assets.Scripts.Entity.Items.Item i) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Entity.Items.Item.ActivateWith (Assets.Scripts.Actor.ActorController actor) [0x00000] in <filename unknown>:0 
+  at Assets.Scripts.Actor.ActorController.LateUpdate () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 3c08 -> priority: 1 
+  Thread -> id: 10bc -> priority: 1 

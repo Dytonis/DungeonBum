@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Actor\ActorStats.cs" />
     <Compile Include="Assets\Scripts\Actor\CollisionDetection\ActorCollider.cs" />
     <Compile Include="Assets\Scripts\Character\InputMovement.cs" />
+    <Compile Include="Assets\Scripts\Character\Inventory.cs" />
     <Compile Include="Assets\Scripts\Entity\Chest.cs" />
     <Compile Include="Assets\Scripts\Entity\CollisionDetection\EntityCollider.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity.cs" />
@@ -85,6 +86,12 @@
     <Compile Include="Assets\Scripts\Entity\Items\ProjectileEffect.cs" />
     <Compile Include="Assets\Scripts\Game\Const.cs" />
     <Compile Include="Assets\Scripts\Phys\PhysObject.cs" />
+    <Compile Include="Assets\Scripts\SoundList.cs" />
+    <Compile Include="Assets\Scripts\UI\CST\InventoryScreen.cs" />
+    <Compile Include="Assets\Scripts\UI\CST\InventorySlot.cs" />
+    <Compile Include="Assets\Scripts\UI\CST\SwitchWindow.cs" />
+    <Compile Include="Assets\Scripts\UI\CST\ToggleCST.cs" />
+    <Compile Include="Assets\Scripts\UI\CameraMouse.cs" />
     <Compile Include="Assets\Scripts\UI\ItemPopup.cs" />
     <Compile Include="Assets\Scripts\World\CollisionDetection\WorldCollider.cs" />
     <Compile Include="Assets\Scripts\World\Materials\BasicMaterial.cs" />

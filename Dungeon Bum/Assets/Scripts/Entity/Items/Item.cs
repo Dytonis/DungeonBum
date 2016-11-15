@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Assets.Scripts.Entity.CollisionDetection;
+using Assets.Scripts.Character;
 
 namespace Assets.Scripts.Entity.Items
 {
@@ -19,8 +20,12 @@ namespace Assets.Scripts.Entity.Items
         public ItemPrefix Prefix;
         public ItemSuffix Suffix;
         public ItemStats Stats;
+        public int MaxStacks = 1;
+        public int Count = 1;
         [Space]
         public string UIName;
+        [Space]
+        public int InventoryPosition = 0;
 
         // Use this for initialization
         new void Start()
@@ -70,6 +75,28 @@ namespace Assets.Scripts.Entity.Items
         void Update()
         {
 
+        }
+
+        public override void ActivateWith(Actor.ActorController actor)
+        {
+            if(actor.GetComponent<Inventory>())
+            {
+                Inventory inv = actor.GetComponent<Inventory>();
+                int throws = inv.AddItemIfAble(this);
+                if(throws > 0)
+                {
+                    if(GetComponent<EntityController>())
+                    {
+                        transform.position = actor.transform.position;
+                        GetComponent<EntityController>().Velocity.y = 20;
+                    }
+                }
+                else
+                {
+                    transform.position = new Vector3(0, 0, 0);
+                    gameObject.SetActive(false);
+                }
+            }
         }
     }
 }

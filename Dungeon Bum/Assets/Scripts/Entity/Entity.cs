@@ -26,7 +26,12 @@ namespace Assets.Scripts.Entity
             }
         }
 
-        public virtual void Acitvate()
+        public virtual void Activate()
+        {
+
+        }
+
+        public virtual void ActivateWith(Actor.ActorController Actor)
         {
 
         }
