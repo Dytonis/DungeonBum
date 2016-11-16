@@ -77,6 +77,18 @@ namespace Assets.Scripts.Entity.Items
 
         }
 
+        public Color GetTextColor()
+        {
+            if (Rarity == ItemRarities.Junk) return new Color(0.6f, 0.6f, 0.6f, 1);
+            else if (Rarity == ItemRarities.Common) return new Color(1f, 1f, 1f, 1);
+            else if (Rarity == ItemRarities.Uncommon) return new Color(0f, 0.95f, 0f, 1);
+            else if (Rarity == ItemRarities.Rare) return new Color(0f, 0f, 0.95f, 1);
+            else if (Rarity == ItemRarities.Epic) return new Color(0.65f, 0f, 0.85f, 1);
+            else if (Rarity == ItemRarities.Legendary) return new Color(0.85f, 0.1f, 0.1f, 1);
+
+            return new Color(1f, 1f, 1f, 1);
+        }
+
         public override void ActivateWith(Actor.ActorController actor)
         {
             if(actor.GetComponent<Inventory>())

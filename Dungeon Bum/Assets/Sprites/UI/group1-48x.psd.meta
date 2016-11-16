@@ -1,12 +1,13 @@
 fileFormatVersion: 2
 guid: 3e7b17d83d9f6ec459c4763aebe135fa
-timeCreated: 1478738794
+timeCreated: 1479251109
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: group1-48x_0
     21300002: group1-48x_1
     21300004: group1-48x_2
+    21300006: group1-48x_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -91,6 +92,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
+        y: 208
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: group1-48x_3
+      rect:
+        serializedVersion: 2
+        x: 144
         y: 208
         width: 48
         height: 48

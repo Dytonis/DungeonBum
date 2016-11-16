@@ -89,6 +89,7 @@
     <Compile Include="Assets\Scripts\SoundList.cs" />
     <Compile Include="Assets\Scripts\UI\CST\InventoryScreen.cs" />
     <Compile Include="Assets\Scripts\UI\CST\InventorySlot.cs" />
+    <Compile Include="Assets\Scripts\UI\CST\ItemHoverPopup.cs" />
     <Compile Include="Assets\Scripts\UI\CST\SwitchWindow.cs" />
     <Compile Include="Assets\Scripts\UI\CST\ToggleCST.cs" />
     <Compile Include="Assets\Scripts\UI\CameraMouse.cs" />

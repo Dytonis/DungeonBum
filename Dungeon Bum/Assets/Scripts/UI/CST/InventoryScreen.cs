@@ -8,16 +8,48 @@ public class InventoryScreen : MonoBehaviour
     public Inventory Inventory;
     public InventorySlot[] Slots;
     public InventorySlot DraggingOver;
+    public bool Dragging;
+    public InventorySlot CurrentlyDragging;
+    public ItemHoverPopup Popup;
 
 	// Use this for initialization
 	void Start () {
 	
 	}
 	
+    public void Reset()
+    {
+        foreach(InventorySlot s in Slots)
+        {
+            s.ItemImage.transform.position = s.firstPostion;
+            s.CheckForDrag = false;
+        }
+
+        DraggingOver = null;
+        Dragging = false;
+        if(Popup != null)
+        {
+            Destroy(Popup.gameObject);
+            Popup = null;
+        }
+        CurrentlyDragging = null;
+    }
+
 	// Update is called once per frame
-	void Update () {
-	
-	}
+	void Update ()
+    {
+        if (Popup != null)
+        {
+            if (Input.mousePosition.x - (126.7f / 2) <= 0)
+            {
+                Popup.transform.position = new Vector3((126.7f / 2), Input.mousePosition.y);
+            }
+            else
+            {
+                Popup.transform.position = Input.mousePosition;
+            }
+        }
+    }
 
     public void SetInventoryVisually(Inventory inv)
     {

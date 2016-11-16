@@ -124,12 +124,7 @@ namespace Assets.Scripts.Actor
                     ItemPopup popup = ItemPopupBasic.GetComponent<ItemPopup>();
 
                     popup.ItemName.text = item.UIName;
-                    if (item.Rarity == ItemRarities.Junk) popup.ItemName.color = new Color(0.6f, 0.6f, 0.6f, 1);
-                    else if (item.Rarity == ItemRarities.Common) popup.ItemName.color = new Color(1f, 1f, 1f, 1);
-                    else if (item.Rarity == ItemRarities.Uncommon) popup.ItemName.color = new Color(0f, 0.95f, 0f, 1);
-                    else if (item.Rarity == ItemRarities.Rare) popup.ItemName.color = new Color(0f, 0f, 0.95f, 1);
-                    else if (item.Rarity == ItemRarities.Epic) popup.ItemName.color = new Color(0.65f, 0f, 0.85f, 1);
-                    else if (item.Rarity == ItemRarities.Legendary) popup.ItemName.color = new Color(0.85f, 0.1f, 0.1f, 1);
+                    popup.ItemName.color = item.GetTextColor();
 
                     popup.Desc.text = "Level " + item.Stats.ItemLevel + " " + item.ImpericalName;
                     popup.Hold.text = "One Handed";

@@ -8,6 +8,7 @@ public class ToggleCST : MonoBehaviour
 
     public GameObject CST;
     public AudioClip MenuOpen;
+    public InventoryScreen Screen;
     public AudioClip MenuClosed;
     public Inventory Inv;
 
@@ -17,6 +18,7 @@ public class ToggleCST : MonoBehaviour
         {
             if(CST.activeSelf)
             {
+                Screen.Reset();
                 CST.SetActive(false);
                 AudioSource.PlayClipAtPoint(MenuClosed, Camera.main.transform.position);
             }
